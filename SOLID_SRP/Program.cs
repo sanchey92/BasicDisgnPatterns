@@ -13,7 +13,7 @@ namespace SOLID_SRP
 
             var persistenceManager = new PersistenceManager();
             var filename = "example.txt";
-            persistenceManager.Save(filename, journal);
+            // persistenceManager.Save(filename, journal);
         }
     }
 }
