@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID_ISP", "SOLID_ISP\SOLI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID_DIP", "SOLID_DIP\SOLID_DIP.csproj", "{45D54F0B-131B-4B4D-8F41-15ADAB95A917}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetDesignPatterns.Creational.Builder", "DotnetDesignPatterns.Creational.Builder\DotnetDesignPatterns.Creational.Builder.csproj", "{C617BFF2-CFD6-4279-AD6D-577AEB080854}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{45D54F0B-131B-4B4D-8F41-15ADAB95A917}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45D54F0B-131B-4B4D-8F41-15ADAB95A917}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45D54F0B-131B-4B4D-8F41-15ADAB95A917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C617BFF2-CFD6-4279-AD6D-577AEB080854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C617BFF2-CFD6-4279-AD6D-577AEB080854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C617BFF2-CFD6-4279-AD6D-577AEB080854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C617BFF2-CFD6-4279-AD6D-577AEB080854}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
