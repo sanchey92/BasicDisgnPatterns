@@ -1,5 +1,4 @@
-﻿using System;
-using DotnetDesignPatterns.Creational.Builder.HtmlBuilderFolder;
+﻿using DotnetDesignPatterns.Creational.Builder.BuilderInheritance;
 
 namespace DotnetDesignPatterns.Creational.Builder
 {
@@ -7,12 +6,10 @@ namespace DotnetDesignPatterns.Creational.Builder
     {
         private static void Main(string[] args)
         {
-            var builder = new HtmlBuilder("ul");
-            builder
-                .AddChild("li", "Hello")
-                .AddChild("li", "World!");
-            
-            Console.WriteLine(builder.ToString());
+            var person = Person.New
+                .Called("Alexandr")
+                .WorkAs("Engineer")
+                .Build();
         }
     }
 }
