@@ -1,4 +1,4 @@
-﻿using DotnetDesignPatterns.Creational.Builder.BuilderInheritance;
+﻿using DotnetDesignPatterns.Creational.Builder.BuilderParameter;
 
 namespace DotnetDesignPatterns.Creational.Builder
 {
@@ -6,10 +6,11 @@ namespace DotnetDesignPatterns.Creational.Builder
     {
         private static void Main(string[] args)
         {
-            var person = Person.New
-                .Called("Alexandr")
-                .WorkAs("Engineer")
-                .Build();
+            var emailService = new EmailService();
+            emailService.SendEmail(builder =>
+                builder.From("test string")
+                    .To("test 2")
+                    .Body("test 3"));
         }
     }
 }
