@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetDesignPatterns.Creati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetDesignPatterns.Creational.Factories", "DotnetDesignPatterns.Creational.Factories\DotnetDesignPatterns.Creational.Factories.csproj", "{69D4E550-600B-45DA-9BD1-625FC554D6E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetDesignPatterns.Creational.Prototype", "DotnetDesignPatterns.Creational.Prototype\DotnetDesignPatterns.Creational.Prototype.csproj", "{366B7555-1A0D-4CA2-AFDD-C349E2733511}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{69D4E550-600B-45DA-9BD1-625FC554D6E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69D4E550-600B-45DA-9BD1-625FC554D6E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69D4E550-600B-45DA-9BD1-625FC554D6E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366B7555-1A0D-4CA2-AFDD-C349E2733511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366B7555-1A0D-4CA2-AFDD-C349E2733511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366B7555-1A0D-4CA2-AFDD-C349E2733511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366B7555-1A0D-4CA2-AFDD-C349E2733511}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
