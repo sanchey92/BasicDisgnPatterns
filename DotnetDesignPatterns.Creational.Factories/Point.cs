@@ -12,14 +12,19 @@ namespace DotnetDesignPatterns.Creational.Factories
             this.y = y;
         }
 
-        public static Point NewCartesianPoint(double x, double y)
-        {
-            return new Point(x, y);
-        }
+        public static PointFactory Factory = new PointFactory();
 
-        public static Point NewPolarPoint(double rho, double theta)
+        public class PointFactory
         {
-            return new Point(rho * Math.Cos(theta), rho + Math.Sin(theta));
+            public Point NewCartesianPoint(double x, double y)
+            {
+                return new Point(x, y);
+            }
+
+            public Point NewPolarPoint(double rho, double theta)
+            {
+                return new Point(rho * Math.Cos(theta), rho + Math.Sin(theta));
+            }
         }
     }
 }

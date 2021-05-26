@@ -1,4 +1,5 @@
-﻿using DotnetDesignPatterns.Creational.Builder.BuilderParameter;
+﻿using System;
+using DotnetDesignPatterns.Creational.Builder.Exercise;
 
 namespace DotnetDesignPatterns.Creational.Builder
 {
@@ -6,11 +7,11 @@ namespace DotnetDesignPatterns.Creational.Builder
     {
         private static void Main(string[] args)
         {
-            var emailService = new EmailService();
-            emailService.SendEmail(builder =>
-                builder.From("test string")
-                    .To("test 2")
-                    .Body("test 3"));
+            var codeBuilder = new CodeBuilder("Person")
+                .AddField("Name", "string")
+                .AddField("Age", "int");
+
+            Console.WriteLine(codeBuilder.ToString());
         }
     }
 }
