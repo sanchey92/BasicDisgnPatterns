@@ -1,5 +1,5 @@
 ﻿using System;
-using DotnetDesignPatterns.Creational.Prototype.CopyThroughSerialization;
+using DotnetDesignPatterns.Creational.Prototype.PrototypeFactoryFolder;
 
 namespace DotnetDesignPatterns.Creational.Prototype
 {
@@ -7,19 +7,8 @@ namespace DotnetDesignPatterns.Creational.Prototype
     {
         private static void Main(string[] args)
         {
-            Foo foo = new Foo
-            {
-                Stuff = 42,
-                Whatever = "abc",
-                Bar = new Bar {Value = 321}
-            };
-
-            var foo2 = Extensions.DeepCopyXml(foo);
-            foo2.Whatever = "xyz";
-            foo2.Bar.Value = 1000;
-
-            Console.WriteLine(foo);
-            Console.WriteLine(foo2);
+            var john = EmployeeFactory.NewMainOfficeEmployee("John", 123);
+            Console.WriteLine(john);
         }
     }
 }
