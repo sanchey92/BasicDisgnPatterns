@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetDesignPatterns.Creati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetDesignPatterns.Creational.Prototype", "DotnetDesignPatterns.Creational.Prototype\DotnetDesignPatterns.Creational.Prototype.csproj", "{366B7555-1A0D-4CA2-AFDD-C349E2733511}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetDesignPatterns.Structural.Adapter", "DotnetDesignPatterns.Structural.Adapter\DotnetDesignPatterns.Structural.Adapter.csproj", "{35EA0C65-7CDF-483E-85BB-BC470B3A5DBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +56,9 @@ Global
 		{366B7555-1A0D-4CA2-AFDD-C349E2733511}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{366B7555-1A0D-4CA2-AFDD-C349E2733511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{366B7555-1A0D-4CA2-AFDD-C349E2733511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35EA0C65-7CDF-483E-85BB-BC470B3A5DBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35EA0C65-7CDF-483E-85BB-BC470B3A5DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35EA0C65-7CDF-483E-85BB-BC470B3A5DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35EA0C65-7CDF-483E-85BB-BC470B3A5DBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
