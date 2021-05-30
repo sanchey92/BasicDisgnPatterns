@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using DotnetDesignPatterns.Structural.Adapter.NoCachingAdapter;
+using DotnetDesignPatterns.Structural.Adapter.AdapterWithCaching;
 
 namespace DotnetDesignPatterns.Structural.Adapter
 {
     public static class Program
     {
-        public static readonly List<VectorObject> vectorObjects =
-            new List<VectorObject>
-            {
-                new VectorRectangle(1, 1, 10, 10),
-                new VectorRectangle(3, 3, 6, 6)
-            };
+        private static readonly List<VectorObject> vectorObjects = new List<VectorObject>
+        {
+            new VectorRectangle(1, 1, 10, 10),
+            new VectorRectangle(3, 3, 6, 6)
+        };
         
         public static void DrawPoint(Point point)
         {
@@ -20,11 +19,11 @@ namespace DotnetDesignPatterns.Structural.Adapter
 
         private static void Main(string[] args)
         {
-            DrawPoints();
-            DrawPoints();
+            Draw();
+            Draw();
         }
-
-        private static void DrawPoints()
+        
+        private static void Draw()
         {
             foreach (var vo in vectorObjects)
             {
