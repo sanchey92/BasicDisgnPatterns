@@ -1,40 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using DotnetDesignPatterns.Structural.Adapter.AdapterWithCaching;
+﻿using Autofac;
+using Autofac.Features.Metadata;
+using DotnetDesignPatterns.Structural.Adapter.AdapterDI;
 
 namespace DotnetDesignPatterns.Structural.Adapter
 {
     public static class Program
     {
-        private static readonly List<VectorObject> vectorObjects = new List<VectorObject>
-        {
-            new VectorRectangle(1, 1, 10, 10),
-            new VectorRectangle(3, 3, 6, 6)
-        };
-        
-        public static void DrawPoint(Point point)
-        {
-            Console.Write(".");
-        }
-
         private static void Main(string[] args)
         {
-            Draw();
-            Draw();
-        }
-        
-        private static void Draw()
-        {
-            foreach (var vo in vectorObjects)
+            var b = new ContainerBuilder();
+            
+            b.RegisterType<OpenCommand>()
+                .As<ICommand>()
+                .WithMetadata("Name", "Open");
+            
+            b.RegisterType<SaveCommand>()
+                .As<ICommand>()
+                .WithMetadata("Name", "Save");
+            
+            // b.RegisterType<Button>();
+            b.RegisterAdapter<Meta<ICommand>, Button>(cmd =>
+                new Button(cmd.Value, (string) cmd.Metadata["Name"]));
+            
+            b.RegisterType<Editor>();
+
+            using var c = b.Build();
+            var editor = c.Resolve<Editor>();
+            editor.ClickAll();
+
+            foreach (var button in editor.Buttons)
             {
-                foreach (var line in vo)
-                {
-                    var adapter = new LineToPointAdapter(line);
-                    foreach (var point in adapter)
-                    {
-                        DrawPoint(point);
-                    }
-                }
+                button.PrintMe();
             }
         }
     }
