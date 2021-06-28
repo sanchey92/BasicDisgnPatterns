@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetDesignPatterns.Struct
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetDesignPatterns.Structural.Decorator", "DotnetDesignPatterns.Structural.Decorator\DotnetDesignPatterns.Structural.Decorator.csproj", "{33819BF7-DF25-4F36-BE51-2C138606558F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetDesignPatterns.Structural.Flyweight", "DotnetDesignPatterns.Structural.Flyweight\DotnetDesignPatterns.Structural.Flyweight.csproj", "{0D58C19C-33FB-47E5-9C97-A7286D2BD4D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,5 +80,9 @@ Global
 		{33819BF7-DF25-4F36-BE51-2C138606558F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33819BF7-DF25-4F36-BE51-2C138606558F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33819BF7-DF25-4F36-BE51-2C138606558F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D58C19C-33FB-47E5-9C97-A7286D2BD4D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D58C19C-33FB-47E5-9C97-A7286D2BD4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D58C19C-33FB-47E5-9C97-A7286D2BD4D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D58C19C-33FB-47E5-9C97-A7286D2BD4D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
