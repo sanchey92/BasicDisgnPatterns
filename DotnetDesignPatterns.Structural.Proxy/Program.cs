@@ -1,5 +1,5 @@
 ﻿using System;
-using DotnetDesignPatterns.Structural.Proxy.SoACompositeProxy;
+using DotnetDesignPatterns.Structural.Proxy.Exersize;
 
 namespace DotnetDesignPatterns.Structural.Proxy
 {
@@ -7,15 +7,12 @@ namespace DotnetDesignPatterns.Structural.Proxy
     {
         private static void Main(string[] args)
         {
-            var creatures = new BadCreature[100];
-            foreach (var creature in creatures)
-            {
-                creature.X++; // not memory-efficient
-            }
+            var person = new Person {Age = 10};
+            var responsiblePerson = new ResponsiblePerson(person);
 
-            var creatures2 = new Creatures(100);
-            foreach (var creature in creatures2)
-                creature.X++;
+            Console.WriteLine(responsiblePerson.Drive());
+            responsiblePerson.Age = 20;
+            Console.WriteLine(responsiblePerson.Drink());
         }
     }
 }
