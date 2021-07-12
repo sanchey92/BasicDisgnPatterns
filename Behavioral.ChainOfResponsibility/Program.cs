@@ -1,5 +1,6 @@
-﻿using System;
-using Behavioral.ChainOfResponsibility.MethodChain;
+﻿
+using System;
+using Behavioral.ChainOfResponsibility.BrokerChain;
 
 namespace Behavioral.ChainOfResponsibility
 {
@@ -7,17 +8,15 @@ namespace Behavioral.ChainOfResponsibility
     {
         private static void Main(string[] args)
         {
-            var goblin = new Creature("Goblin", 1, 1);
+            var game = new Game();
+            var goblin = new BrokerCreature(game, "Strong Goblin", 2, 2);
             Console.WriteLine(goblin);
 
-            var root = new CreatureModifier(goblin);
+            using (new BrokerDoubleAttackModifier(game, goblin))
+            {
+                Console.WriteLine(goblin);
+            }
 
-            root.Add(new NoBonusesModifier(goblin));
-            root.Add(new DoubleAttackModifier(goblin));
-            // root.Add(new DoubleAttackModifier(goblin));
-            root.Add(new IncreaseDefenseModifier(goblin)) ;
-            
-            root.Handle();
             Console.WriteLine(goblin);
         }
     }
