@@ -1,5 +1,4 @@
-﻿using System;
-using Behavioral.Mediator.ChatRoom;
+﻿using Behavioral.Mediator.MediatorWithEvents;
 
 namespace Behavioral.Mediator
 {
@@ -7,23 +6,13 @@ namespace Behavioral.Mediator
     {
         private static void Main(string[] args)
         {
-            var room = new ChatRoom.ChatRoom();
-            var john = new Person("John");
-            var jane = new Person("Jane");
-            var simon = new Person("Simon");
+            var game = new Game();
+            var player = new Player("John", game);
+            var coach = new Coach(game);
             
-            room.Join(john);
-            room.Join(jane);
-            
-            john.Say("Hello, Room!");
-            jane.Say("Hello, John!");
-            
-            room.Join(simon);
-            
-            simon.Say("Hi everyone");
-            
-            jane.PrivateMessage("Simon", "Hello Simon");
-            
+            player.Score();
+            player.Score();
+            player.Score();
         }
     }
 }
