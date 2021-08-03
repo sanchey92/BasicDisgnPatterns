@@ -1,4 +1,5 @@
-﻿using Behavioral.Mediator.MediatorWithEvents;
+﻿using System;
+using Behavioral.Mediator.Exercise;
 
 namespace Behavioral.Mediator
 {
@@ -6,13 +7,19 @@ namespace Behavioral.Mediator
     {
         private static void Main(string[] args)
         {
-            var game = new Game();
-            var player = new Player("John", game);
-            var coach = new Coach(game);
+            var mediator = new Exercise.Mediator();
+            var p1 = new Participant(mediator);
+            var p2 = new Participant(mediator);
             
-            player.Score();
-            player.Score();
-            player.Score();
+            p1.Say(2);
+            
+            Console.WriteLine(p1.Value);
+            Console.WriteLine(p2.Value);
+            
+            p2.Say(4);
+
+            Console.WriteLine(p1.Value);
+            Console.WriteLine(p2.Value);
         }
     }
 }
