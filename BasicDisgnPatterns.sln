@@ -40,6 +40,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Behavioral.Mediator", "Beha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Behavioral.Memento", "Behavioral.Memento\Behavioral.Memento.csproj", "{B33F0950-1143-4639-9BF7-4E4065CB40E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Behavioral.NullObject", "Behavioral.NullObject\Behavioral.NullObject.csproj", "{A2C4F3D1-B4FF-4722-B974-64C120284776}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,5 +128,9 @@ Global
 		{B33F0950-1143-4639-9BF7-4E4065CB40E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B33F0950-1143-4639-9BF7-4E4065CB40E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B33F0950-1143-4639-9BF7-4E4065CB40E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2C4F3D1-B4FF-4722-B974-64C120284776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C4F3D1-B4FF-4722-B974-64C120284776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C4F3D1-B4FF-4722-B974-64C120284776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C4F3D1-B4FF-4722-B974-64C120284776}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
