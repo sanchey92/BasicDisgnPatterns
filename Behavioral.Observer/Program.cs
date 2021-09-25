@@ -1,21 +1,42 @@
 ﻿using System;
-using Behavioral.Observer.Observer.Events;
+using System.Reactive.Linq;
+using Behavioral.Observer.ObserverInterfaces;
 
 namespace Behavioral.Observer
 {
-    public static class Program
+    public class Program : IObserver<Event>
     {
-        private static void Main()
+        public Program()
         {
             var person = new Person();
-            person.FallsIll += PersonOnFallsIll;
+            var sub = person.Subscribe(this);
+
+            //  // person.OfType<FallsIllEvent>()
+            //     .Subscribe(args => // OnNext
+            //         Console.WriteLine($"We need a doctor to {args.Address}"));
+
             person.CatchACold();
-            person.FallsIll -= PersonOnFallsIll;
         }
 
-        private static void PersonOnFallsIll(object? sender, FallsIllEventArgs e)
+        public static void Main()
         {
-            Console.WriteLine($"Call a doctor to {e.Address}");
+            new Program();
+        }
+
+        public void OnCompleted()
+        {
+        }
+
+        public void OnError(Exception error)
+        {
+        }
+
+        public void OnNext(Event value)
+        {
+            if (value is FallsIllEvent args)
+            {
+                Console.WriteLine($"Call doctor to {args.Address}");
+            }
         }
     }
 }
