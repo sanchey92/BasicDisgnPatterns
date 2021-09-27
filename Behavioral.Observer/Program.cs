@@ -1,41 +1,31 @@
 ﻿using System;
-using System.Reactive.Linq;
-using Behavioral.Observer.ObserverInterfaces;
+using System.ComponentModel;
+using Behavioral.Observer.PropertyDependencies;
 
 namespace Behavioral.Observer
 {
-    public class Program : IObserver<Event>
+    public static class Program
     {
-        public Program()
-        {
-            var person = new Person();
-            var sub = person.Subscribe(this);
-
-            //  // person.OfType<FallsIllEvent>()
-            //     .Subscribe(args => // OnNext
-            //         Console.WriteLine($"We need a doctor to {args.Address}"));
-
-            person.CatchACold();
-        }
-
         public static void Main()
         {
-            new Program();
+            var person = new Person {Age = 15};
+            person.Citizen = true;
+
+            person.PropertyChanged += PersonOnPropertyChanged;
+
+            Console.WriteLine("Changing age:");
+            person.Age++;
+            Console.WriteLine("Changing Citizenship");
+            person.Citizen = false;
         }
 
-        public void OnCompleted()
+        private static void PersonOnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-        }
-
-        public void OnError(Exception error)
-        {
-        }
-
-        public void OnNext(Event value)
-        {
-            if (value is FallsIllEvent args)
+            var person = (Person)sender;
+            
+            if (e.PropertyName == "CanVote")
             {
-                Console.WriteLine($"Call doctor to {args.Address}");
+                Console.WriteLine($"Voting status changed! ({person.Age})");
             }
         }
     }
