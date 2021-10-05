@@ -1,6 +1,5 @@
 ﻿using System;
-using System.ComponentModel;
-using Behavioral.Observer.PropertyDependencies;
+using Behavioral.Observer.BidirectionalObserver;
 
 namespace Behavioral.Observer
 {
@@ -8,25 +7,20 @@ namespace Behavioral.Observer
     {
         public static void Main()
         {
-            var person = new Person {Age = 15};
-            person.Citizen = true;
+            var product = new Product { Name = "Book" };
+            var window = new Window {ProductName = "Book"};
 
-            person.PropertyChanged += PersonOnPropertyChanged;
+            using var binding = new BidirectionalBinding(
+                product,
+                () => product.Name,
+                window,
+                () => window.ProductName
+            );
 
-            Console.WriteLine("Changing age:");
-            person.Age++;
-            Console.WriteLine("Changing Citizenship");
-            person.Citizen = false;
-        }
+            product.Name = "Table";
 
-        private static void PersonOnPropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            var person = (Person)sender;
-            
-            if (e.PropertyName == "CanVote")
-            {
-                Console.WriteLine($"Voting status changed! ({person.Age})");
-            }
+            Console.WriteLine(product);
+            Console.WriteLine(window);
         }
     }
 }
