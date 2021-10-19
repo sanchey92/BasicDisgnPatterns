@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Behavioral.NullObject", "Be
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Behavioral.Observer", "Behavioral.Observer\Behavioral.Observer.csproj", "{5799480F-AF47-4809-AC28-D7DA52209717}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Behavioral.State", "Behavioral.State\Behavioral.State.csproj", "{C4A2CABA-AB83-4E79-BF78-19870779FAFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -138,5 +140,9 @@ Global
 		{5799480F-AF47-4809-AC28-D7DA52209717}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5799480F-AF47-4809-AC28-D7DA52209717}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5799480F-AF47-4809-AC28-D7DA52209717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A2CABA-AB83-4E79-BF78-19870779FAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A2CABA-AB83-4E79-BF78-19870779FAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A2CABA-AB83-4E79-BF78-19870779FAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A2CABA-AB83-4E79-BF78-19870779FAFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
