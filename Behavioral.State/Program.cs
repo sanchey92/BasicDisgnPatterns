@@ -1,5 +1,4 @@
-﻿using System;
-using Behavioral.State.Classic;
+﻿using Behavioral.State.Handmade;
 
 namespace Behavioral.State
 {
@@ -7,10 +6,7 @@ namespace Behavioral.State
     {
         private static void Main(string[] args)
         {
-            var ls = new Switch();
-            ls.On();
-            ls.Off();
-            ls.Off();
+            HandmadeSolution.Run();
         }
     }
 }
