@@ -1,4 +1,4 @@
-﻿using Behavioral.State.Handmade;
+﻿using Behavioral.State.SwitchBasedState;
 
 namespace Behavioral.State
 {
@@ -6,7 +6,7 @@ namespace Behavioral.State
     {
         private static void Main(string[] args)
         {
-            HandmadeSolution.Run();
+            SwitchBasedStateSolution.Run();
         }
     }
 }
