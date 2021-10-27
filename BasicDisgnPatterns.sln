@@ -50,6 +50,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Behavioral.Strategy", "Beha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Behavioral.TemplateMethod", "Behavioral.TemplateMethod\Behavioral.TemplateMethod.csproj", "{88DC6CA4-6EC3-430E-A086-71929E3ABF50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Behavioral.Visitor", "Behavioral.Visitor\Behavioral.Visitor.csproj", "{10B122F3-6DB1-4CAB-9534-0C729860D07D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -156,5 +158,9 @@ Global
 		{88DC6CA4-6EC3-430E-A086-71929E3ABF50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88DC6CA4-6EC3-430E-A086-71929E3ABF50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88DC6CA4-6EC3-430E-A086-71929E3ABF50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10B122F3-6DB1-4CAB-9534-0C729860D07D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10B122F3-6DB1-4CAB-9534-0C729860D07D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10B122F3-6DB1-4CAB-9534-0C729860D07D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10B122F3-6DB1-4CAB-9534-0C729860D07D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
