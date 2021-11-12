@@ -1,5 +1,4 @@
-﻿using System;
-using Behavioral.Visitor.Intrusive;
+﻿using Behavioral.Visitor.Classic;
 
 namespace Behavioral.Visitor
 {
@@ -7,7 +6,7 @@ namespace Behavioral.Visitor
     {
         private static void Main(string[] args)
         {
-            IntrusiveSolution.Run();
+            Solution.Run();
         }
     }
 }
